@@ -409,12 +409,14 @@ http://www.templatemo.com/tm-515-eatery
     background-repeat: no-repeat;
     background-attachment: local;
     background-size: cover;
-    height: 650px;
+    background-color:#ffffff;
+    height: 833px; /*height:650px*/
   }
 
   .slider .item-first {
-    background-image: url(../BG\ \(2\).png);
-    background-color: white;
+    background-image: url(../images/Slice\ 3.png);
+    background-color:#ffffff;
+   
   }
 
   .slider .item-second {

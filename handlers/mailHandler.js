@@ -1,3 +1,4 @@
+const { response } = require("express")
 const nodemailer=require("nodemailer")
 
 const mailGun=require("nodemailer-mailgun-transport")
@@ -10,20 +11,33 @@ const auth={
     }
 }
 
-const transporter=nodemailer.createTransport(mailGun(auth))
+async function sendMyMail(sender,subject,body){
+    try{
+        console.log("inside send mail")
+        const transporter=await nodemailer.createTransport(mailGun(auth))
 
 
-const mailOptions={
-    from:"suhanichawla200@gmail.com",
-    to:"suhanichawla2000@gmail.com",
-    subject:"testing",
-    text:"I would like to get in touch with you"
+        const mailOptions={
+            from:sender,
+            to:"suhanichawla2000@gmail.com",
+            subject:subject,
+            text:body
+        }
+
+        var res=await transporter.sendMail(mailOptions)
+        if(res!=null && res.id!=null){
+            //console.log("returnin success")
+            return "success"
+        }else{
+            return "fail"
+        }
+
+    }catch(err){
+        return err;
+    }
+    
 }
 
-transporter.sendMail(mailOptions,(err,data)=>{
-    if(err){
-        console.log(err)
-    }else{
-        console.log("success")
-    }
-})
+module.exports={
+    sendMail:sendMyMail
+}

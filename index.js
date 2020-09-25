@@ -4,21 +4,33 @@ var bodyParser=require("body-parser")
 var eventRoutes=require("./routes/events")
 var errorHandler=require("./handlers/error")
 var db=require("./models")
+var path = require('path');
 const port=process.env.PORT || 8080;
 const nodemailer = require('nodemailer');
-
+var mailer=require("./handlers/mailHandler")
+var homepath=path.join(__dirname, '')
 
 app.use('/',express.static('public'))
 app.set('view engine', 'html');
 app.use(bodyParser.json())
 
 app.get('/about',(req,res)=>{
-    res.render("signin.html")
+    res.redirect('/aboutus.html')
 })
 
 app.get('/team',(req,res)=>{
     console.log("coming here");
     res.redirect('/team.html')
+})
+
+app.post('/sendMail',async function(req,res){
+    const {sender,subject,content}=req.body
+    var status=await mailer.sendMail(sender,subject,content);
+    if(status=="success"){
+        res.sendStatus(200)
+    }else{
+        res.sendStatus(404)
+    }
 })
 
 app.get('/events/hackathons',(req,res)=>{

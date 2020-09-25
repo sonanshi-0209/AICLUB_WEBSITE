@@ -41,6 +41,13 @@ http://www.templatemo.com/tm-515-eatery
     padding-bottom: 20px;
   }
 
+  footer h2{
+    color:beige;
+  }
+
+  footer{
+    text-align: left;
+  }
   h3 {
     font-size: 1.5em;
     margin-bottom: 0;
@@ -837,7 +844,7 @@ http://www.templatemo.com/tm-515-eatery
 
   footer a,
   footer p {
-    color: #909090;
+    color: #d8d8d8;
   }
 
   footer strong {

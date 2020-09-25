@@ -1,0 +1,115 @@
+.mainbody {
+    /* background: url('BG.png'); */
+    /* background-size: 100vw;
+    background-repeat: no-repeat;
+    padding: 15% 2%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activitiesrow {
+    width: 90vw;
+    height: 60vh;
+    min-height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.text-white{
+    color:#fff!important;
+    font-weight: bold;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.activities-heading {
+    height: 20px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    /* line-height: 65px; */
+    /* or 361% */
+    color: #0F0C29;
+    margin: 1%;
+    margin-top: 3%;
+}
+
+.partition-line {
+    margin: 2% 5%;
+    margin-top: 0;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+.act-1 {
+    width: 170px;
+    margin: 0 auto !important;
+    height: 170px;
+    background: url(workshop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.act-2 {
+    width: 170px;
+    margin: 0 auto !important;
+    height: 170px;
+    background: url(gathering.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.act-3 {
+    width: 170px;
+    margin: 0 auto !important;
+    height: 170px;
+    background: url(noun_Hackathon_6324.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-1,
+.btn-2,
+.btn-3 {
+    margin: 0 auto!important;
+    margin-top: 5%!important;
+    /* width: 157px;
+    height: 54px; */
+    padding: 3% 10%;
+    background: radial-gradient(44.79% 88.89% at 47.93% 73.15%, #0F0C29 0%, #302B63 100%);
+    border-radius: 100px;
+}
+
+@media (max-width:1000px) {
+    .mainbody {
+        background: url('BG.png');
+        background-size: auto;
+        background-repeat: no-repeat;
+        padding: 15% 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .activitiesrow {
+        width: 80vw;
+        height: auto;
+        min-height: 50px;
+    }
+    .act-1-col,
+    .act-2-col,
+    .act-3-col {
+        margin: 12% 2%;
+    }
+}

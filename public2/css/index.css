@@ -1,0 +1,70 @@
+
+ul{
+    list-style-type:none;
+
+}
+body{
+    font-family: 'Baloo Chettan 2', cursive !important;
+}
+h1,h3,.card-header,.card-footer,.navbar-brand{
+    font-family: 'Bree Serif', serif;
+}
+
+li{
+    list-style-type:none;
+}
+.listyle{
+    /* box-sizing: border-box;
+    border: 2px solid; */
+    min-width: 30%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+#eventlist{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 5px 5px;
+    justify-content: space-evenly;
+}
+#parentofevent{
+    text-align: center;
+}
+
+@media screen and (max-width: 900px){
+    .listyle{
+        min-width: 45%;
+    }
+    
+}
+
+@media screen and (max-width: 550px){
+    .listyle{
+        min-width: 99%;
+        text-align: center;
+    }
+    
+}
+
+#navbarNav{
+    float: left;
+}
+.card-header:first-child {
+    font-size: 25px;
+}
+.card-footer:last-child {
+    font-size: 25px;
+}
+@media screen and (min-width: 900px){
+    .navbar-dark{
+        height: 15vh;
+    }
+    .nav-link{
+        font-size: 20px;
+    }
+    .navbar-brand{
+        font-size: 30px !important;
+    }
+}

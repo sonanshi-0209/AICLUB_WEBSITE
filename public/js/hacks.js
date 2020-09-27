@@ -27,7 +27,7 @@ pr.then((eventlist)=>{
         div.innerHTML=`
                 <h2 class="display-4">${events[i].name}</h2>
                 <p class="lead">
-                    <img src="${events[i].imageURL}">
+                    <img class="sizedImg" src="${events[i].imageURL}">
                 </p>
                 <hr class="my-4">
                 <p>${events[i].description}</p>

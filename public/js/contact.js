@@ -7,7 +7,6 @@ submit.addEventListener("click",()=>{
 
 })
 function sendMail(){
-    console.log("coming here");
     var name=document.getElementById("cf-name").value
     var email=document.getElementById("cf-email").value
     var subject=document.getElementById("cf-subject").value
@@ -33,7 +32,16 @@ function sendMail(){
         return res.text();
     })
     pr.then((res)=>{
-        console.log(res)
+        console.log(res);
+        if(res=="OK"){
+            alert("Thank you for contacting us. Our team will get in touch with you shortly")
+        }else{
+            alert("Some error occured. Please try again later.")
+        }
+        document.getElementById("cf-name").value="";
+        document.getElementById("cf-email").value=""
+        document.getElementById("cf-subject").value=""
+        document.getElementById("cf-message").value=""
     });
 }
 

@@ -9,6 +9,7 @@ const port=process.env.PORT || 8080;
 const nodemailer = require('nodemailer');
 var mailer=require("./handlers/mailHandler")
 var homepath=path.join(__dirname, '')
+require('dotenv').config();
 
 app.use('/',express.static('public'))
 app.set('view engine', 'html');
@@ -32,6 +33,7 @@ app.post('/sendMail',async function(req,res){
         res.sendStatus(404)
     }
 })
+
 
 app.get('/events/hackathons',(req,res)=>{
     res.render("signin.html")

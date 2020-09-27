@@ -21,9 +21,6 @@ const hackathonSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    registerLink:{
-        type:String,
-    },
     link:{
         type:String
     },

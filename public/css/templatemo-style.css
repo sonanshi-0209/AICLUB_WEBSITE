@@ -774,6 +774,11 @@ http://www.templatemo.com/tm-515-eatery
     height: 55px;
   }
 
+  .sizedImg{
+    height: 50vh;
+    width: 50vh;
+  }
+
   #contact button#cf-submit {
     background: linear-gradient(178.18deg, #0F0C29 -13.56%, #302B63 158.3%);;
     border-radius: 0;

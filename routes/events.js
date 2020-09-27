@@ -53,7 +53,6 @@ createHackathon= async function(req,res,next){
             time,
             date,
             link,
-            registerLink,
             description
         })
         return res.status(200).json(hackathon);

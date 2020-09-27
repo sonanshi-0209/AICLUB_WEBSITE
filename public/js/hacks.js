@@ -35,12 +35,9 @@ pr.then((eventlist)=>{
                 <p>Time: ${events[i].time}</p>
                 <p>Venue: ${events[i].venue}</p>
                 <div class="myownrow">
-                <p class="lead">
-                <a class="btn btn-primary btn-lg buttonstyle" href="${events[i].link}" role="button">Learn more</a>
-                </p>
                 <div class="sizedbox"></div>
                 <p class="lead">
-                <a class="btn btn-primary btn-lg buttonstyle" href="${events[i].registerationLink}" role="button">Register</a>
+                <a class="btn btn-primary btn-lg buttonstyle" href="${events[i].link}" role="button">Register</a>
                 </p>
                 </div>
         `

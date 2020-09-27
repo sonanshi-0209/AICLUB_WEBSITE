@@ -25,26 +25,24 @@ pr.then((eventlist)=>{
         if(i%2==0){
             div.style.backgroundColor="#FFFFFF"
         }
-        div.innerHTML=`
-            <div class="row">
-            <div class="col-md-3 col-sm-6">
-                         <div class="thumbnail">
-                              <img src="${events[i].imageURL}">
-                         
-                         <div class="caption">
-                            <h3 class="display-4">${events[i].name}</h3>
-                            <h6>${events[i].description}</h6>
-                            <h6>Date: ${events[i].date}</h6>
-                            <h6>Time: ${events[i].time}</h6>
-                            <h6>Venue: ${events[i].venue}</h6>
-                        </div>
-                         <p class="lead">
-                        <a class="btn btn-primary btn-sm buttonstyle" href="${events[i].link}" role="button">Register</a>
-                        </p>
-                        </div>
-                    </div>
+        div.innerHTML=
+        `
+        <h2 class="display-4">${events[i].name}</h2>
+                <p class="lead">
+                    <img class="sizedImg" src="${events[i].imageURL}">
+                </p>
+                <hr class="my-4">
+                <p>${events[i].description}</p>
+                <p>Date: ${events[i].date}</p>
+                <p>Time: ${events[i].time}</p>
+                <p>Venue: ${events[i].venue}</p>
+                <div class="myownrow">
+                <p class="lead">
+                <a class="btn btn-primary btn-lg buttonstyle" href="${events[i].link}" role="button">Register</a>
+                </p>
+                <div class="sizedbox"></div>
                 </div>
-                `
+        `
         eventsection.append(div);
     }
     

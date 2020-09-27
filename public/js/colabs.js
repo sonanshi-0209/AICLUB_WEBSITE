@@ -28,7 +28,7 @@ pr.then((eventlist)=>{
                 <p> AI CLUB IGDTUW <br> collaborated with</>
                 <h2 class="display-4">${events[i].organization}</h2>
                 <p class="lead">
-                    <img src="${events[i].imageURL}">
+                    <img class="sizedImg" src="${events[i].imageURL}">
                 </p>
                 <p>for</p>
                 <p>${events[i].event}</p>

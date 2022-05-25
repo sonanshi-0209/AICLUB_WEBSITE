@@ -22,6 +22,8 @@
 
 .aboutsection{
     padding-bottom: 0;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .vidsection{
@@ -46,6 +48,8 @@ video {
     }
     .flexclass{
         padding: 2px;
+        margin-left: 100px;
+        margin-right: 100px;
     }
     .videodiv{
         padding: 15px;
